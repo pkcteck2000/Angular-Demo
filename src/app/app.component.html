@@ -1,9 +1,13 @@
 
 
-<app-header [headerName]="myHeader"></app-header>
+<app-header (newItemEvent)="addItem($event)" [headerName]="myHeader"></app-header>
+
+<div class="container p-5">
+    <input class="form-control mr-sm-2" [(ngModel)]="myHeader" aria-label="Search">
+</div>
 
 <div [ngClass]="class1">
-    <p [ngStyle]="{'color': '#00f', 'background-color' : '#ff0', 'padding': '20px'}"> Hello World 1</p>
+    <p [ngStyle]="{'color': '#00f', 'background-color' : '#ff0', 'padding': '20px'}">{{ fromHeader }}</p>
 </div>
 
 
@@ -11,7 +15,7 @@
     <p [ngStyle]="colorObj"> Hello World 2</p>
 </div>
 
-<div [ngClass]="{ 'one':true, 'two':false }">
+<div [ngClass]="{ 'one':true, 'two':true }">
     <div *ngFor="let cnt of country">
         <p [ngStyle]="{'color': '#fff', 'background-color' : cnt === 'india' ? '#0f0' : '#000', 'padding': '20px'}">
             {{ cnt }}

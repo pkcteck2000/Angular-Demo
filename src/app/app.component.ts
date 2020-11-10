@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  myLightGreen = '#45CE30';
+  myPurple = '#8B78E6';
+  
   colorObj = {
       'color': '#fff',
       'background-color' : '#f00',
@@ -15,11 +18,15 @@ export class AppComponent {
 
   country = ['india', 'usa', 'england'];
 
-  myLightGreen = '#45CE30';
-  myPurple = '#8B78E6';
-
   class1 = 'one';
   class2 = 'two';
 
-  myHeader = "Premnath"
+  myHeader = "Angular";
+  
+  fromHeader = "Hello World 1";
+
+  addItem(newItem: string) {
+    this.fromHeader = newItem;
+  }
+  
 }
