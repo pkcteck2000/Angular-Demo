@@ -1,14 +1,21 @@
 
-<app-header></app-header>
 
-<div class="container d-flex justify-content-center align-items-center mt-4">
+<app-header [headerName]="myHeader"></app-header>
+
+<div [ngClass]="class1">
     <p [ngStyle]="{'color': '#00f', 'background-color' : '#ff0', 'padding': '20px'}"> Hello World 1</p>
 </div>
 
-<div class="container d-flex justify-content-center align-items-center mt-4">
-    <p [ngStyle]="{'color': '#fff', 'background-color' : purple, 'padding': '20px'}"> Hello World 2</p>
+
+<div [ngClass]="[ 'one', class2 ]">
+    <p [ngStyle]="colorObj"> Hello World 2</p>
 </div>
 
-<div class="container d-flex justify-content-center align-items-center mt-4">
-    <p [ngStyle]="colorObj"> Hello World 3</p>
+<div [ngClass]="{ 'one':true, 'two':false }">
+    <div *ngFor="let cnt of country">
+        <p [ngStyle]="{'color': '#fff', 'background-color' : cnt === 'india' ? '#0f0' : '#000', 'padding': '20px'}">
+            {{ cnt }}
+        </p>
+    </div>
 </div>
+

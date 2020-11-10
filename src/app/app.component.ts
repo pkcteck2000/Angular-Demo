@@ -13,6 +13,13 @@ export class AppComponent {
       'padding': '20px'
   };
 
-  lightGreen = '#45CE30';
-  purple = '#8B78E6';
+  country = ['india', 'usa', 'england'];
+
+  myLightGreen = '#45CE30';
+  myPurple = '#8B78E6';
+
+  class1 = 'one';
+  class2 = 'two';
+
+  myHeader = "Premnath"
 }

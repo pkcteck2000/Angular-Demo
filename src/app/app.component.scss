@@ -1,4 +1,12 @@
-.container {
+.one {
     background-color: bisque;
     height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+}
+
+.two {
+    border: 2px solid red;
 }
