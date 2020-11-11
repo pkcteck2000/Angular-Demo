@@ -6,19 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  searchWord = "";
-
-  @Input() headerName;
-
-  @Output() newItemEvent = new EventEmitter<string>();
-
-  addNewItem() {
-    this.newItemEvent.emit(this.searchWord);
-  }
-
   constructor() { }
   ngOnInit(): void {
   }
-
 }

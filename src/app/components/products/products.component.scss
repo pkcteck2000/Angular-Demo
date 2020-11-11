@@ -1,0 +1,16 @@
+.container {
+    background-color: bisque;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+    padding: 10px;
+}
+
+.two {
+    border: 2px solid red;
+    padding: 10px;
+    background-color: rgb(238, 235, 231);
+    height: 15em;
+}

@@ -1,0 +1,20 @@
+
+<div class="container row">
+    <div class="col-12">
+        <p class="product-heading">Products List!</p>
+    </div>
+    <div class="col-12">
+        <ul>
+            <li>
+                Product list
+                    <ul *ngFor="let product of PRODUCTS">
+                        <li><a routerLink="/products/details">{{ product.name }}</a></li>
+                    </ul>
+            </li>
+            <li><a routerLink="/products/gallery">Go to Gallery</a></li>
+        </ul>
+    </div>
+    <div class="col-12 two">
+        <router-outlet></router-outlet>
+    </div>
+</div>
